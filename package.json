@@ -1,19 +1,19 @@
 {
   "name": "prince-promise",
   "version": "0.1.0",
-  "description": "Convert HTML to PDF using this promise based api for PrinceXML",
+  "description": "Convert HTML to PDF using a promise based api for PrinceXML.",
   "repository": "panosoft/prince-promise",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha test --harmony"
+    "test": "mocha --harmony"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "dargs": "^4.0.1",
     "lodash": "^3.10.0",
     "prince": "1.0.5",
-    "spawn-promise": "^0.0.1",
+    "spawn-promise": "^0.1.0",
     "suspend": "^0.6.1"
   },
   "devDependencies": {
