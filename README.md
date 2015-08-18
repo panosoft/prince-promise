@@ -17,12 +17,15 @@ npm install prince-promise
 ## Usage
 
 ```js
-var Prince = require('prince-promise');
+var prince = require('prince-promise');
 
-var prince = Prince.create();
 var html = 'Hello';
+var options = {
+  licenseFile: 'path',
+  encrypt: true
+};
 
-prince.render(html)
+prince(html)
   .then(function (pdf) {
     // ...
   });
@@ -30,40 +33,12 @@ prince.render(html)
 
 ## API
 
-- [`create`](#create)
-
-__Prince__
-
-- [`render`](#render)
+- [`prince`](#prince)
 
 ---
 
-<a name="create"/>
-#### create ( [options] )
-
-Returns an instance of [`Prince`](#Prince). Default render options can be set using `options`.
-
-__Arguments__
-- `options` - An object of default options use each time `render` is called. See `render` `options` below. Defaults to `{}`.
-
-__Example__
-
-```js
-var options = {
-  licenseFile: 'path',
-  encrypt: true
-}
-
-var prince = Prince.create(options);
-```
-
----
-
-<a name="Prince"/>
-### Prince
-
-<a name="render"/>
-#### render ( html [, options] )
+<a name="prince"/>
+#### prince ( html [, options] )
 
 Converts an HTML string to a PDF. Returns a `Promise` that is fulfilled with the `pdf` buffer.
 
@@ -85,18 +60,3 @@ __Arguments__
     encrypt: true
   };
   ```
-
-__Example__
-
-```js
-var html = 'Hello';
-var options = {
-  licenseFile: 'path',
-  encrypt: true
-};
-
-prince.render(html, options)
-  .then(function (pdf) {
-    // ...
-  });
-```
