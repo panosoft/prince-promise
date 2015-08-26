@@ -4,7 +4,7 @@ var expect = require('chai')
 	.expect;
 var pdfText = require('pdf-text');
 
-describe('#render', function () {
+describe('#prince', function () {
 	it('create pdf', function () {
 		var content = 'Hello';
 		var promise = new Promise(function (resolve, reject) {
@@ -16,6 +16,6 @@ describe('#render', function () {
 				})
 				.catch(reject);
 		});
-		return expect(promise).to.eventually.deep.equal(content);
+		return expect(promise).to.eventually.equal(content);
 	});
 });
