@@ -5,16 +5,17 @@
   "repository": "panosoft/prince-promise",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --harmony"
+    "test": "mocha --harmony_arrow_functions"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@panosoft/ramda-utils": "^0.1.12",
+    "co": "^4.6.0",
     "dargs": "^4.0.1",
-    "lodash": "^3.10.0",
     "prince": "1.0.5",
-    "spawn-promise": "^0.1.0",
-    "suspend": "^0.6.1"
+    "ramda": "^0.17.1",
+    "spawn-promise": "^0.1.0"
   },
   "devDependencies": {
     "chai": "^3.2.0",
