@@ -37,7 +37,7 @@ prince(html)
 
 ---
 
-<a name="prince"/>
+<a name="prince"></a>
 #### prince ( html [, options] )
 
 Converts an HTML string to a PDF. Returns a `Promise` that is fulfilled with the `pdf` buffer.
